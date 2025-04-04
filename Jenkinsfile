@@ -7,7 +7,9 @@ pipeline {
         stage('Maven clean') {
             steps {
                 
-                    sh 'mvn clean'
+                dir('springrestassociations') {  // Change this to the folder containing pom.xml
+                        sh 'mvn clean'
+                    }'
                 }
             }
 
